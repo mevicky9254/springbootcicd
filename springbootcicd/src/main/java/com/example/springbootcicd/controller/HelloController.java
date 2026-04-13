@@ -12,6 +12,11 @@ public class HelloController {
         return "Hello, Spring Boot is alive 🚀";
     }
 
+     @GetMapping("/name")
+    public String sayHello(@RequestParam(defaultValue = "Spring Boot") String name) {
+        return "Hello bawa";
+    }
+
     @GetMapping("/greet")
     public String greetUser(@RequestParam(defaultValue = "Guest") String name) {
         return "Hello, " + name + "!";
